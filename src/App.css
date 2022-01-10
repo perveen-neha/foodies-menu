@@ -1,0 +1,13 @@
+.photo {
+  height: 350px;
+  width: 350px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.info-container{
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
