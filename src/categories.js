@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Categories = () => {
+const Categories = ({categoryy,setInfo}) => {
+const setLunch = () =>{
+    const newItem = categoryy.filter((lunch)=> lunch.category === 'lunch')
+    setInfo(newItem);
+}
+
 return(
-    <h1>yo babaes</h1>
+    <div className="category">
+        <button className="btn" onClick={setLunch}>
+            Lunch
+        </button>
+    </div>
 )
 }
 
