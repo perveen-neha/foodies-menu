@@ -1,19 +1,25 @@
 import React from 'react'
 
-const Categories = ({items,setInfo}) => {
+const Categories = ({items,setInfo,Categoriies}) => {
 
-    const setLunch = () =>{
-        const newItem = items.filter((lunch)=> lunch.category === 'lunch')
+    const setButton = (category) =>{
+        if(category==='all')
+        {
+            setInfo(items)
+            return
+        }
+        const newItem = items.filter((lunch)=> lunch.category === category)
         setInfo(newItem);
         console.log('category:', newItem);
     }
 
 return(
     <div className="category">
-        <button className="btn" onClick={setLunch}>
-            Lunch
+        {Categoriies.map((category)=> { return (
+        <button className="btn" onClick={()=>setButton(category)}>
+            {category}
         </button>
-
+        )})}
     </div>
 )
 }
