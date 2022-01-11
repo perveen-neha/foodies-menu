@@ -1,16 +1,19 @@
 import React from 'react'
 
-const Categories = ({categoryy,setInfo}) => {
-const setLunch = () =>{
-    const newItem = categoryy.filter((lunch)=> lunch.category === 'lunch')
-    setInfo(newItem);
-}
+const Categories = ({items,setInfo}) => {
+
+    const setLunch = () =>{
+        const newItem = items.filter((lunch)=> lunch.category === 'lunch')
+        setInfo(newItem);
+        console.log('category:', newItem);
+    }
 
 return(
     <div className="category">
         <button className="btn" onClick={setLunch}>
             Lunch
         </button>
+
     </div>
 )
 }
